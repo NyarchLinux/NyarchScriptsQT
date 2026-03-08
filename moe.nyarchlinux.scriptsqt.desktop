@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=NyarchScript QT
+GenericName=System Script Manager
+Comment=Run system maintenance and installation scripts on Nyarch Linux
+Exec=nyarchscriptqt
+Icon=moe.nyarchlinux.scriptsqt
+Type=Application
+Categories=System;Settings;Qt;
+Keywords=system;scripts;updates;install;tweaks;nyarch;
+Terminal=false
+StartupNotify=true
+X-KDE-SubstituteUID=false
+X-KDE-RunOnDiscreteGpu=false

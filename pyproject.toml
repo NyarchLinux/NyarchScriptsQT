@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "moe.nyarchlinux.scriptsqt"
+version = "0.1.0"
+description = "NyarchScript QT - A Kirigami GUI for running system maintenance scripts on Nyarch Linux"
+readme = "README.md"
+license = { text = "GPL-3.0-or-later" }
+requires-python = ">=3.10"
+authors = [
+  { name = "Nyarch Linux" }
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+  "Environment :: X11 Applications :: Qt",
+  "Intended Audience :: End Users/Desktop"
+]
+
+[project.scripts]
+nyarchscriptqt = "nyarchscriptqt.app:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+nyarchscriptqt = ["qml/*.qml", "icons/*.svg"]
+
+[tool.setuptools.data-files]
+"share/applications" = ["moe.nyarchlinux.scriptsqt.desktop"]
+"share/metainfo" = ["moe.nyarchlinux.scriptsqt.metainfo.xml"]
+"share/icons/hicolor/scalable/apps" = ["moe.nyarchlinux.scriptsqt.svg"]

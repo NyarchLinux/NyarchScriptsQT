@@ -1,0 +1,7 @@
+include README.md
+include LICENSE.txt
+include moe.nyarchlinux.scriptsqt.desktop
+include moe.nyarchlinux.scriptsqt.metainfo.xml
+include moe.nyarchlinux.scriptsqt.svg
+recursive-include src/nyarchscriptqt/qml *.qml
+recursive-include src/nyarchscriptqt/icons *.svg

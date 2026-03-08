@@ -1,0 +1,11 @@
+.vscode/
+.flatpak/
+.flatpak-builder/
+flatpak-build-dir/
+repo/
+build/
+dist/
+*.egg-info/
+__pycache__/
+*.pyc
+*.flatpak
