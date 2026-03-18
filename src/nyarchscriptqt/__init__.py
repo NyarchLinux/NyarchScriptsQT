@@ -1,2 +1,2 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
-# SPDX-FileCopyrightText: 2024 Nyarch Linux
+# SPDX-FileCopyrightText: 2026 Nyarch Linux

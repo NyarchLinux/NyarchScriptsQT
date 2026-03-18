@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: GPL-3.0-or-later
-# SPDX-FileCopyrightText: 2024 Nyarch Linux
+# SPDX-FileCopyrightText: 2026 Nyarch Linux
 
 """Scripts data model and runner for QML consumption"""
 
 import subprocess
+import os 
 
 from PySide6.QtCore import QAbstractListModel, Qt, QModelIndex, QObject, Slot
 from PySide6.QtQml import QmlElement
@@ -415,10 +416,33 @@ class ScriptRunner(QObject):
 
     def __init__(self, parent=None):
         super().__init__(parent)
+    
+    def is_flatpak(self) -> bool:
+        """
+        Check if we are in a flatpak
+
+        Returns:
+            bool: True if we are in a flatpak
+        """
+        if os.getenv("container"):
+            return True
+        return False
+
+    def get_spawn_command(self) -> list:
+        """
+        Get the spawn command to run commands on the user system
+
+        Returns:
+            list: space diveded command  
+        """
+        if self.is_flatpak():
+            return ["flatpak-spawn", "--host"]
+        else:
+            return []
 
     @Slot(str)
     def runScript(self, command):
         """Run command in a new kitty terminal window via flatpak-spawn"""
         subprocess.Popen(
-            ["flatpak-spawn", "--host", "kitty", "bash", "-c", command]
+            self.get_spawn_command() + ["konsole", "-e", "bash", "-c", command]
         )
