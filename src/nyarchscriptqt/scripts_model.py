@@ -134,33 +134,6 @@ SCRIPTS = [
                 "subtitle": None,
                 "scripts": [
                     {
-                        "title": "Firefox GNOME Theme",
-                        "subtitle": "Make Firefox more coherent with your GNOME desktop",
-                        "command": "cd /tmp; git clone https://github.com/rafaelmardojai/firefox-gnome-theme; cd firefox-gnome-theme; bash scripts/auto-install.sh; exec bash",
-                        "description": "cd /tmp\ngit clone https://github.com/rafaelmardojai/firefox-gnome-theme\ncd firefox-gnome-theme && bash scripts/auto-install.sh",
-                        "website": "https://github.com/rafaelmardojai/firefox-gnome-theme",
-                    },
-                    {
-                        "title": "Uninstall Firefox GNOME Theme",
-                        "subtitle": "Uninstall Firefox GNOME Theme",
-                        "command": "xdg-open https://github.com/rafaelmardojai/firefox-gnome-theme#uninstalling",
-                        "description": "See: https://github.com/rafaelmardojai/firefox-gnome-theme#uninstalling",
-                        "website": "https://github.com/rafaelmardojai/firefox-gnome-theme#uninstalling",
-                    },
-                    {
-                        "title": "Discord Dnome Theme",
-                        "subtitle": "Make Discord more coherent with your desktop, also installs Crycord to inject CSS",
-                        "command": "yay -S crycord; mkdir -p ~/.config/discord-themes; cd ~/.config/discord-themes; wget https://raw.githubusercontent.com/GeopJr/DNOME/main/DNOME-latest.css; crycord -c ~/.config/discord-themes/DNOME-latest.css;exec bash",
-                        "description": "yay -S crycord\nmkdir -p ~/.config/discord-themes\nwget https://raw.githubusercontent.com/GeopJr/DNOME/main/DNOME-latest.css\ncrycord -c ~/.config/discord-themes/DNOME-latest.css",
-                        "website": "https://github.com/NyarchLinux/NyarchScript/tree/master/docs/DNOME.md",
-                    },
-                    {
-                        "title": "Uninstall Discord Dnome Theme",
-                        "subtitle": "Uninstall Dnome theme from Discord",
-                        "command": "crycord -r; exec bash",
-                        "description": "crycord -r",
-                    },
-                    {
                         "title": "Install Pywalfox",
                         "subtitle": "Adapts Firefox theme color to the Nyarch Linux theme",
                         "command": "yay -Sy python-pywalfox; pywalfox install; xdg-open https://addons.mozilla.org/it/firefox/addon/pywalfox/; exec bash",
@@ -237,18 +210,6 @@ SCRIPTS = [
                     },
                 ],
             },
-            {
-                "title": "Touchscreen Scripts",
-                "subtitle": None,
-                "scripts": [
-                    {
-                        "title": "Install Screen Autorotate Extension",
-                        "subtitle": "Enable automatic screen rotation regardless of touch mode",
-                        "command": "cd /tmp; git clone https://github.com/shyzus/gnome-shell-extension-screen-autorotate.git; mv gnome-shell-extension-screen-autorotate/screen-rotate@shyzus.github.io ~/.local/share/gnome-shell/extensions/;exec bash",
-                        "description": "cd /tmp\ngit clone https://github.com/shyzus/gnome-shell-extension-screen-autorotate.git\nmv gnome-shell-extension-screen-autorotate/screen-rotate@shyzus.github.io ~/.local/share/gnome-shell/extensions/",
-                    },
-                ],
-            },
         ],
     },
     {
@@ -282,6 +243,12 @@ SCRIPTS = [
                         "subtitle": "Show whether the current session is running on Wayland or X11",
                         "command": "echo $XDG_SESSION_TYPE;exec bash",
                         "description": "echo $XDG_SESSION_TYPE",
+                    },
+                    {
+                        "title": "Run Nyancat",
+                        "subtitle": "nya",
+                        "command": "nyancat;exec bash",
+                        "description": "nyancat",
                     },
                 ],
             },
