@@ -61,66 +61,6 @@ SCRIPTS = [
                     },
                 ],
             },
-            {
-                "title": "Nyarch Applications",
-                "subtitle": "Nyarch Linux applications are not automatically updated, use this section to update them",
-                "scripts": [
-                    {
-                        "title": "Update Nyarch Updater",
-                        "subtitle": "Update Nyarch Updater application by downloading it from the latest release on GitHub",
-                        "command": "cd /tmp; wget https://github.com/nyarchlinux/nyarchupdater/releases/latest/download/nyarchupdater.flatpak; flatpak install nyarchupdater.flatpak;exec bash",
-                        "description": "cd /tmp\nwget https://github.com/nyarchlinux/nyarchupdater/releases/latest/download/nyarchupdater.flatpak\nflatpak install nyarchupdater.flatpak",
-                    },
-                    {
-                        "title": "Update Nyarch Assistant",
-                        "subtitle": "Update Nyarch Assistant application by downloading it from the latest release on GitHub",
-                        "command": "cd /tmp; wget https://github.com/nyarchlinux/nyarchassistant/releases/latest/download/nyarchassistant.flatpak; flatpak install nyarchassistant.flatpak;exec bash",
-                        "description": "cd /tmp\nwget https://github.com/nyarchlinux/nyarchassistant/releases/latest/download/nyarchassistant.flatpak\nflatpak install nyarchassistant.flatpak",
-                    },
-                    {
-                        "title": "Update Nyarch Tour",
-                        "subtitle": "Update Nyarch Tour application by downloading it from the latest release on GitHub",
-                        "command": "cd /tmp; wget https://github.com/nyarchlinux/nyarchtour/releases/latest/download/nyarchtour.flatpak; flatpak install nyarchtour.flatpak;exec bash",
-                        "description": "cd /tmp\nwget https://github.com/nyarchlinux/nyarchtour/releases/latest/download/nyarchtour.flatpak\nflatpak install nyarchtour.flatpak",
-                    },
-                    {
-                        "title": "Update Nyarch Customize",
-                        "subtitle": "Update Nyarch Customize application by downloading it from the latest release on GitHub",
-                        "command": "cd /tmp; wget https://github.com/nyarchlinux/nyarchcustomize/releases/latest/download/nyarchcustomize.flatpak; flatpak install nyarchcustomize.flatpak;exec bash",
-                        "description": "cd /tmp\nwget https://github.com/nyarchlinux/nyarchcustomize/releases/latest/download/nyarchcustomize.flatpak\nflatpak install nyarchcustomize.flatpak",
-                    },
-                    {
-                        "title": "Update Nyarch Wizard",
-                        "subtitle": "Update Nyarch Wizard application by downloading it from the latest release on GitHub",
-                        "command": "cd /tmp; wget https://github.com/nyarchlinux/nyarchwizard/releases/latest/download/wizard.flatpak; flatpak install wizard.flatpak;exec bash",
-                        "description": "cd /tmp\nwget https://github.com/nyarchlinux/nyarchwizard/releases/latest/download/wizard.flatpak\nflatpak install wizard.flatpak",
-                    },
-                    {
-                        "title": "Update Catgirl Downloader",
-                        "subtitle": "Update Catgirl Downloader application by downloading it from the latest release on GitHub",
-                        "command": "cd /tmp; wget https://github.com/nyarchlinux/catgirldownloader/releases/latest/download/catgirldownloader.flatpak; flatpak install catgirldownloader.flatpak;exec bash",
-                        "description": "cd /tmp\nwget https://github.com/nyarchlinux/catgirldownloader/releases/latest/download/catgirldownloader.flatpak\nflatpak install catgirldownloader.flatpak",
-                    },
-                    {
-                        "title": "Update Waifu Downloader",
-                        "subtitle": "Update Waifu Downloader application by downloading it from the latest release on GitHub",
-                        "command": "cd /tmp; wget https://github.com/nyarchlinux/waifudownloader/releases/latest/download/waifudownloader.flatpak; flatpak install waifudownloader.flatpak;exec bash",
-                        "description": "cd /tmp\nwget https://github.com/nyarchlinux/waifudownloader/releases/latest/download/waifudownloader.flatpak\nflatpak install waifudownloader.flatpak",
-                    },
-                    {
-                        "title": "Update Nyarch Script",
-                        "subtitle": "Update Nyarch Script application by downloading it from the latest release on GitHub",
-                        "command": "cd /tmp; wget https://github.com/nyarchlinux/nyarchscript/releases/latest/download/nyarchscript.flatpak; flatpak install nyarchscript.flatpak;exec bash",
-                        "description": "cd /tmp\nwget https://github.com/nyarchlinux/nyarchscript/releases/latest/download/nyarchscript.flatpak\nflatpak install nyarchscript.flatpak",
-                    },
-                    {
-                        "title": "Update Material You",
-                        "subtitle": "Update Material You extension, the GNOME extension that manages Material You theming",
-                        "command": "cd /tmp; git clone https://github.com/FrancescoCaracciolo/material-you-colors.git; cd material-you-colors; make build;make install; npm install --prefix $HOME/.local/share/gnome-shell/extensions/material-you-colors@francescocaracciolo.github.io;cd $HOME/.local/share/gnome-shell/extensions/material-you-colors@francescocaracciolo.github.io; git clone https://github.com/francescocaracciolo/adwaita-material-you; cd adwaita-material-you; bash local-install.sh; exec bash",
-                        "description": "cd /tmp\ngit clone https://github.com/FrancescoCaracciolo/material-you-colors.git\ncd material-you-colors\nmake build && make install\nnpm install --prefix $HOME/.local/share/gnome-shell/extensions/material-you-colors@francescocaracciolo.github.io\ncd adwaita-material-you && bash local-install.sh",
-                    },
-                ],
-            },
         ],
     },
     {
