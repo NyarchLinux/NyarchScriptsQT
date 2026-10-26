@@ -200,7 +200,7 @@ Kirigami.ScrollablePage {
                         right: parent.right
                         topMargin: Kirigami.Units.largeSpacing
                     }
-                    implicitHeight: commandLabel.implicitHeight
+                    implicitHeight: commandRow.implicitHeight
                                     + Kirigami.Units.largeSpacing * 2
                     radius: Kirigami.Units.cornerRadius
                     color: Kirigami.ColorUtils.linearInterpolation(
@@ -215,20 +215,46 @@ Kirigami.ScrollablePage {
                     )
                     border.width: 1
 
-                    Controls.Label {
-                        id: commandLabel
+                    RowLayout {
+                        id: commandRow
                         anchors {
                             top: parent.top
                             left: parent.left
                             right: parent.right
                             margins: Kirigami.Units.largeSpacing
                         }
-                        text: scriptCommand
-                        font.family: "monospace"
-                        font.pointSize: Kirigami.Theme.smallFont.pointSize
-                        wrapMode: Text.WrapAnywhere
-                        textFormat: Text.PlainText
-                        opacity: 0.9
+                        spacing: Kirigami.Units.smallSpacing
+
+                        Controls.TextArea {
+                            id: commandLabel
+                            Layout.fillWidth: true
+                            Layout.preferredHeight: contentHeight + topPadding + bottomPadding
+                            text: scriptCommand
+                            readOnly: true
+                            selectByMouse: true
+                            font.family: "monospace"
+                            font.pointSize: Kirigami.Theme.smallFont.pointSize
+                            wrapMode: TextEdit.WrapAnywhere
+                            background: null
+                            padding: 0
+                            opacity: 0.9
+                        }
+
+                        Controls.ToolButton {
+                            icon.name: "edit-copy"
+                            display: Controls.AbstractButton.IconOnly
+                            Layout.alignment: Qt.AlignTop
+
+                            Controls.ToolTip.visible: hovered
+                            Controls.ToolTip.text: qsTr("Copy command")
+
+                            onClicked: {
+                                commandLabel.selectAll()
+                                commandLabel.copy()
+                                commandLabel.deselect()
+                                Controls.ToolTip.show(qsTr("Copied to clipboard"))
+                            }
+                        }
                     }
                 }
             }
